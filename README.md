@@ -1,3 +1,11 @@
+## Why choose Oracle Cloud?
+It provides 2 always free vm.
+
+## Prerequisite
+1. Create Oracle Cloud Infrastructure(OCI) account: https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/get-oracle-com-account.html
+2. Create a VCN and public subnet using VCN Creation Wizard or manually: https://docs.oracle.com/en-us/iaas/base-database/doc/vcn-and-subnets.html#DBSCB-GUID-569678E5-6B7F-4440-A437-771DB1DA5EC8
+3. Edit the Security List of the subnet and open dest port 8388 with source ip to be 0.0.0.0/0
+
 ## Install tfenv to manage terraform version
 
 refer to link [here](https://github.com/tfutils/tfenv)
@@ -25,37 +33,7 @@ I choose `brew install tfenv` as I use Macbook
 
 I choose [API Key Authentication](https://docs.oracle.com/en-us/iaas/Content/terraform/configuring.htm#api-key-auth) so I will export below vars(see more details from the doc link):
 
-export is not needed and instead tfvars are provided otherwise it will keep giving error:
-```
-│ Error: Can't set variable when applying a saved plan
-│ 
-│ The variable fingerprint cannot be set using the -var and -var-file options when applying a saved plan file, because it is neither ephemeral nor has it been declared during the plan
-│ operation. To declare an ephemeral variable which is not saved in the plan file, use ephemeral = true.
-╵
-╷
-│ Error: Can't set variable when applying a saved plan
-│ 
-│ The variable private_key_path cannot be set using the -var and -var-file options when applying a saved plan file, because it is neither ephemeral nor has it been declared during the
-│ plan operation. To declare an ephemeral variable which is not saved in the plan file, use ephemeral = true.
-╵
-╷
-│ Error: Can't set variable when applying a saved plan
-│ 
-│ The variable user_ocid cannot be set using the -var and -var-file options when applying a saved plan file, because it is neither ephemeral nor has it been declared during the plan
-│ operation. To declare an ephemeral variable which is not saved in the plan file, use ephemeral = true.
-╵
-╷
-│ Error: Can't set variable when applying a saved plan
-│ 
-│ The variable tenancy_ocid cannot be set using the -var and -var-file options when applying a saved plan file, because it is neither ephemeral nor has it been declared during the plan
-│ operation. To declare an ephemeral variable which is not saved in the plan file, use ephemeral = true.
-```
-``` # unset when using TF_VAR_* and running apply otherwise it will error
-export TF_VAR_tenancy_ocid=xxx
-export TF_VAR_user_ocid=xxx
-export TF_VAR_private_key_path=xxx
-```
-
+fill in the variable values in common.tfvars
 
 ## Apply the code
 
