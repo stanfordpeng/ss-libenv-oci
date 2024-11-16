@@ -27,7 +27,10 @@ I choose `brew install tfenv` as I use Macbook
     ``` 
     tfenv install 1.10.0-rc1 
     ```
-
+- use it
+  ```
+  tfenv use 1.10.0-rc1 
+  ```
 ## Choose Auth Way
 
 
@@ -39,7 +42,7 @@ fill in the variable values in common.tfvars
 
 ```
 cd terraform
-
+terraform init # if first time
 terraform plan -out=tfplan --var-file=tfvars/common.tfvars # tfvars/common.tfvars contains senstive info therefore it is masked. can replace it with your local private tfvar file which is not git tracked.
 terraform apply "tfplan"
 terraform output instance_details
