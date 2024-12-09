@@ -49,7 +49,7 @@ terraform output instance_details
 ```
 Please wait for 5-10 mins before proceeding:
 
-Grab ss from the instance_details value and copy to ss clients such as outline(iOS) or input the related details to other clients.
+Grab ss from the instance_details value via `terraform output` command and copy to ss clients such as outline(iOS) or input the related details to other clients.
 
 
 ## debug
@@ -61,4 +61,4 @@ sudo cat /etc/iptables/rules.v4
 sudo systemctl status shadowsocks-libev
 ```
 
-check file /var/lib/cloud/instance/scripts/part-001 is correctly executed inside the file
+check file `/var/lib/cloud/instance/scripts/part-001` is correctly executed inside the file
