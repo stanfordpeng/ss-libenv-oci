@@ -45,6 +45,8 @@ I choose [API Key Authentication](https://docs.oracle.com/en-us/iaas/Content/ter
 
 or fill in the variable values in [common.tfvars](https://github.com/stanfordpeng/ss-libenv-oci/blob/main/terraform/tfvars/common.tfvars)
 
+See [How to Generate an API Signing Key](https://docs.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#two) and  [How to Upload Public Key](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#three)
+
 ## Apply the code
 
 ```
