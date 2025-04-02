@@ -36,13 +36,12 @@ I choose `brew install tfenv` as I use Macbook
 
 I choose [API Key Authentication](https://docs.oracle.com/en-us/iaas/Content/terraform/configuring.htm#api-key-auth) so you can either export below vars(see more details from the doc link):
 
-TF_VAR_tenancy_ocid="<oci tenancy id: ocid1xxxxxxx>"
-TF_VAR_user_ocid="<oci user id: ocid1xxxxxxxx>"
-TF_VAR_private_key_path="<oci private key path: ./xxxx.pem>"
-TF_VAR_fingerprint="<oci finger print: 09:4e:2f:75:90:03xxxxxxxx>"
-
-TF_VAR_compartment_id="<oci compartment id>"
-TF_VAR_subnet_id="<oci subnet id >"
+- TF_VAR_tenancy_ocid="<oci tenancy id: ocid1xxxxxxx>"
+- TF_VAR_user_ocid="<oci user id: ocid1xxxxxxxx>"
+- TF_VAR_private_key_path="<oci private key path: ./xxxx.pem>"
+- TF_VAR_fingerprint="<oci finger print: 09:4e:2f:75:90:03xxxxxxxx>"
+- TF_VAR_compartment_id="<oci compartment id>"
+- TF_VAR_subnet_id="<oci subnet id >"
 
 or fill in the variable values in [common.tfvars](https://github.com/stanfordpeng/ss-libenv-oci/blob/main/terraform/tfvars/common.tfvars)
 
