@@ -54,9 +54,20 @@ terraform plan -out=tfplan --var-file=tfvars/common.tfvars # tfvars/common.tfvar
 terraform apply "tfplan"
 terraform output instance_details
 ```
+Output:
+```
+[
+  {
+    "name" = "instance2024xxxxxx"
+    "password" = "xxxxxxx"
+    "public_ip" = "xxxxxxx"
+    "ss" = "ss://base64stringstring@xxxx.xxxx.xxxx.xxxx:8388"
+  },
+]
+```
 Please wait for 5-10 mins before proceeding:
 
-Grab ss from the instance_details value via `terraform output` command and copy to ss clients such as outline(iOS) or input the related details to other clients.
+Grab ss from the instance_details value via `terraform output` command and copy to ss client such as [outline(iOS)](https://getoutline.org/en-GB/get-started/) or input the related details to other clients such as V2Box and Potaso.
 
 
 ## debug
