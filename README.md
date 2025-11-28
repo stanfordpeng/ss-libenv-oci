@@ -67,9 +67,11 @@ Output:
   },
 ]
 ```
-Please wait for 5-10 mins before proceeding:
+Please wait for 5-10 mins before proceeding.
 
-Grab ss from the instance_details value via `terraform output` command and copy to ss client such as [outline(iOS)](https://getoutline.org/en-GB/get-started/) or input the related details to other clients such as V2Box and Potaso.
+## Connection from Device
+
+Grab ss from the instance_details value via `terraform output` command and copy to ss client such as [outline(iOS)](https://getoutline.org/en-GB/get-started/) or input the related details to other clients such as **V2Box and Potaso**.
 
 
 ## debug
